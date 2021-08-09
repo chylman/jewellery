@@ -1,3 +1,14 @@
-h1 {
-  color: red;
-}
+@import 'blocks/_colors';
+@import 'blocks/_normalize';
+@import 'blocks/_reset';
+@import 'blocks/_utils';
+@import 'blocks/_viewport-breakpoints';
+@import 'blocks/_visually-hidden';
+@import 'blocks/_mixins';
+@import 'blocks/_icon';
+@import 'blocks/_fonts';
+@import 'blocks/_body';
+@import 'blocks/_header';
+@import 'blocks/_main';
+@import 'blocks/_footer';
+@import 'blocks/_search-form';
