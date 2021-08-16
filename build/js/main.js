@@ -100,7 +100,9 @@
     filter.classList.toggle('filter--close');
   }
 
-  filter.classList.add('filter--close');
+  if (filter) {
+    filter.classList.add('filter--close');
+  }
 
   if (filterButtonOpen) {
     filterButtonOpen.addEventListener('click', onFilterButtonOpen);
@@ -163,4 +165,3 @@
     }
   });
 }())
-

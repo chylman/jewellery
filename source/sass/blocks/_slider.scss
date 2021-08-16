@@ -1,5 +1,5 @@
 .slider {
-  margin: 130px 0 0 0;
+  margin: 120px 0 0 0;
 
   @media (max-width: $mobile-width) {
     margin: 70px 0 0 0;
@@ -31,7 +31,7 @@
   @include title;
 
   width: 100%;
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
 }
 
 .slider__link {
@@ -52,7 +52,7 @@
 
 .slider__button-prev,
 .slider__button-next {
-  top: 35px;
+  top: 65px;
 
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@
 }
 
 .slider__card p {
-  margin: 25px 0 15px 0;
+  margin: 18px 0 5px 0;
   padding: 0;
 
   font-family: $font-text;
