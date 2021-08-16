@@ -1,0 +1,100 @@
+.intro {
+  margin: 19px 0 0 0;
+
+  background-size: cover;
+  background-position: center;
+
+
+}
+
+.intro--main-page {
+  background-image: url('../img/group28intro-desktop.jpg');
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/group28intro-desktop@2x.jpg');
+  }
+}
+
+.intro--catalog-page {
+  background-image: url('../img/group29-1.jpg');
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/../img/group29.jpg');
+  }
+
+}
+
+.intro__wrapper {
+  @include wrapper;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 463px;
+}
+
+.intro--catalog-page .intro__wrapper {
+  @media (max-width: $mobile-width) {
+    min-height: 261px;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-header;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  text-transform: uppercase;
+  color: $white;
+
+  @media (max-width: $mobile-width) {
+    font-size: 38px;
+  }
+}
+
+.intro--catalog-page .intro__title {
+  @media (max-width: $mobile-width) {
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;
+  }
+}
+
+.intro__text {
+  margin: 0 0 0 0;
+  padding: 0;
+
+  font-family: $font-header;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 130%;
+  text-align: center;
+
+  color: $white;
+
+  @media (max-width: $mobile-width) {
+    font-size: 34px;
+  }
+}
+
+
+.intro--catalog-page .intro__text {
+  @media (max-width: $mobile-width) {
+    font-family: $font-header;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+  }
+}

@@ -25,6 +25,13 @@
   }
 }
 
+.body--login-page .header {
+  display: flex;
+  justify-content: center;
+
+  background-color: $white;
+}
+
 .header--menu-close {
   @media (max-width: $tablet-width) {
     background-color: $white;
@@ -32,6 +39,7 @@
 }
 
 .header--menu-open {
+  z-index: 99;
   position: fixed;
 
   width: 100%;
@@ -107,7 +115,6 @@
   }
 }
 
-
 .header__logo-img path {
   @media (max-width: $tablet-width) {
     fill: $white;
@@ -118,6 +125,10 @@
   @media (max-width: $tablet-width) {
     fill: $brown;
   }
+}
+
+.body--login-page .header__logo-img path {
+  fill: $brown;
 }
 
 .header__login-link,

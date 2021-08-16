@@ -1,0 +1,24 @@
+.accordion {
+  position: relative;
+}
+
+.accordion .accordion__title {
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion--close .accordion__main-content {
+  display: none;
+}
+
+.accordion--open .accordion__main-content {
+  display: block;
+}
+
+.accordion--close .accordion-icon--close {
+  display: block;
+}
+
+.accordion--open .accordion-icon--open {
+  display: block;
+}

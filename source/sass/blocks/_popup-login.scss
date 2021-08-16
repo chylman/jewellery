@@ -1,0 +1,17 @@
+.popup-login {
+  z-index: 99;
+
+  margin: auto;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  width: 430px;
+  max-height: 586px;
+
+  box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
+}

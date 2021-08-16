@@ -1,0 +1,264 @@
+.card {
+  margin: 80px 0 0 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 60px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 20px 0 0 0;
+  }
+}
+
+.card__wrapper {
+  @include wrapper;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start center;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+}
+
+.card__slider {
+  position: relative;
+}
+
+.card__slider-pagination {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+
+    display: block;
+  }
+}
+
+.card__slider-pagination p {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $black;
+}
+
+.card__img-list {
+  display: grid;
+  grid-template-columns: minmax(50px, 100px) 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card__img-item {
+  &:last-child {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+
+    @media (max-width: $tablet-width) {
+      grid-column: 1 / 4;
+      grid-row: 1 / 2;
+
+      height: 286px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+.card__img-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card__description {
+  width: 370px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-width: 309px;
+  }
+}
+
+.card__name {
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  font-family: $font-header;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+
+  color: $black;
+}
+
+.card__price {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 130%;
+
+  color: $black;
+}
+
+.card__pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 45px 0 35px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.card__pagination-item {
+  margin: 0 35px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.card__pagination-item button {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: $gray;
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__pagination-item--active button {
+  color: $black;
+}
+
+.card__additional-info {
+  margin: 0 0 40px 0;
+
+  width: 100%;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 130%;
+
+  color: $black;
+}
+
+.card__additional-info td {
+  padding: 15px 0;
+
+  &:first-child {
+    font-weight: 500;
+  }
+
+  &:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.card__add-cart-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 68px;
+
+  padding: 15px;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: $white;
+  background-color: $brown;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.card__advantages-item {
+  margin: 0 5px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 50px;
+  }
+}
+
+.card__advantages-item p {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+
+  color: $gray;
+}

@@ -1,0 +1,149 @@
+.catalog {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  row-gap: 80px;
+
+  justify-items: center;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog__list {
+  grid-column: 1 / 4;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: start center;
+
+  column-gap: 30px;
+  row-gap: 44px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog__image-wrapper {
+  height: 272px;
+
+  @media (max-width: $tablet-width) {
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 136px;
+  }
+}
+
+.catalog__item img {
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.catalog__item p {
+  margin: 25px 0 15px 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.catalog__item span {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.catalog__pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0 20px;
+
+  list-style: none;
+}
+
+.catalog__pagination-item {
+  margin: 0 12px 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.catalog__pagination-button {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $gray;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog__pagination-item--active .catalog__pagination-button  {
+  color: $black;
+}
+
+.catalog__button {
+  width: 70px;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.catalog__button--prev {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.catalog__button--next {
+  text-align: right;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+

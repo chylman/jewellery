@@ -1,0 +1,206 @@
+.login {
+  padding: 0 0 60px 0;
+
+  background-color: $mid-gray;
+}
+
+.body--login-page .login {
+  @include wrapper;
+
+  width: 430px;
+
+  background-color: $white;
+}
+
+
+.login__logo {
+  margin: 50px 0 0 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.login__logo path {
+  fill: $brown;
+}
+
+.login__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 45px;
+}
+
+.login__button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 14px;
+  height: 14px;
+
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+.body--login-page .login__button-close {
+  display: none;
+}
+
+.body--login-page .login__img {
+  display: none;
+}
+
+.login__img {
+  height: 138px;
+
+  background-image: url('../img/sweet-ice-cream-photography-ootMB9iANOc-unsplash(1)-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/sweet-ice-cream-photography-ootMB9iANOc-unsplash(1).jpg');
+  }
+}
+
+.login__title {
+  margin: 50px 0 30px 0;
+
+  font-family: $font-header;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+
+  color: $black;
+}
+
+.login__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.login__form input[type='password'],
+.login__form input[type='email'] {
+  width: 100%;
+  height: 36px;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $black;
+
+  background: none;
+  border: none;
+  border-bottom: 1px solid $black;
+}
+
+.login__form input[type='email'] {
+  margin: 0 0 30px 0;
+}
+
+.login__form input[type='password'],
+.login__form input[type='email'] {
+  &::placeholder {
+    font-family: $font-text;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $gray;
+  }
+}
+
+.login__form button[type='submit'] {
+  width: 100%;
+  height: 68px;
+
+  margin: 35px 0 0 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: $white;
+  background-color: $brown;
+  border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.login__form input[type='checkbox'] + label {
+  align-self: flex-end;
+
+  margin: 5px 0 0 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: $gray;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.login__form input[type='checkbox']:focus + label {
+  border: 1px dashed $gray;
+}
+
+.login__form input[type='checkbox']:checked + label {
+  color: $black;
+}
+
+.login__text {
+  margin: 20px 0 0 0;
+  padding: 0;
+
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $gray;
+}
+
+.login__text a {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $black;
+}

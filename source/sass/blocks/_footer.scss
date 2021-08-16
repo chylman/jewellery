@@ -231,7 +231,9 @@
 }
 
 .footer__social-item {
-  min-width: 120px;
+  display: flex;
+
+  min-width: 125px;
 
   margin: 0 0 21px 0;
 
@@ -263,7 +265,7 @@
 
 .footer__social-item svg {
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
 
   margin: 0 15px 0 0;
 
