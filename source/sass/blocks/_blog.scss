@@ -1,5 +1,13 @@
 .blog {
   margin: 120px 0 0 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 70px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 60px 0 0 0;
+  }
 }
 
 .blog__wrapper {
@@ -14,12 +22,20 @@
   @include title;
 
   margin: 0 0 16px 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 18px 0;
+  }
 }
 
 .blog__link-all {
   @include link-style;
 
   margin: 0 0 67px 0;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 57px 0;
+  }
 }
 
 .blog__article-layout {
@@ -48,7 +64,9 @@
 
   @media (max-width: $mobile-width) {
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 256px minmax(256px, 1fr);
+
+    height: 100%;
   }
 }
 
@@ -61,9 +79,14 @@
   grid-column: 2 / 3;
 
   @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
 
     grid-row: initial;
     grid-column: initial;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -79,8 +102,16 @@
     position: initial;
 
     width: 100%;
-    height: initial;
+    height: 300px;
   }
+
+  @media (max-width: $mobile-width) {
+    position: initial;
+
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 .blog__article-text-wrapper {
@@ -91,6 +122,19 @@
   padding: 66px 40px 40px 40px;
 
   background-color: $mid-gray;
+
+  @media (max-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 40px 40px 50px 40px;
+
+  }
 }
 
 .blog__article img {
@@ -105,12 +149,26 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 256px;
+    height: 100%;
+  }
+}
+
+.blog__article picture {
+  @media (max-width: $mobile-width) {
+    height: 100%;
   }
 }
 
 .blog__article--large {
   height: 630px;
+
+  @media (max-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 100%;
+  }
 }
 
 .blog__article--large img {
@@ -122,6 +180,11 @@
 
   @media (max-width: $tablet-width) {
     grid-column: initial;
+    height: 300px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 100%;
   }
 }
 
@@ -135,10 +198,20 @@
 
 .blog__article--left picture {
   grid-column: 2 / 3;
+
+  @media (max-width: $tablet-width) {
+    grid-column: initial;
+  }
+
 }
 
 .blog__article--left .blog__article-text-wrapper {
   grid-row: 1 / 2;
+
+  @media (max-width: $tablet-width) {
+    grid-column: initial;
+    grid-row: initial;
+  }
 }
 
 

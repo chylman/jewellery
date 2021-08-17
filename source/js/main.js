@@ -146,21 +146,24 @@
       // when window width is >= 320px
       320: {
         slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
           el: '.swiper-pagination',
           type: 'fraction',
           renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + ' of ' + '<span class="' + totalClass + '"></span>';
-          }
+          },
         },
       },
       // when window width is >= 480px
       768: {
         slidesPerView: 2,
+        slidesPerGroup: 2,
       },
       // when window width is >= 640px
       1024: {
         slidesPerView: 4,
+        slidesPerGroup: 4,
       },
     }
   });

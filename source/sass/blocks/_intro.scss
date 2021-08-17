@@ -4,7 +4,9 @@
   background-size: cover;
   background-position: center;
 
-
+  @media (max-width: $tablet-width) {
+    margin: 0 0 0 0;
+  }
 }
 
 .intro--main-page {
@@ -33,6 +35,14 @@
   align-items: center;
 
   min-height: 463px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 57px 0 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 45px 0 45px;
+  }
 }
 
 .intro--catalog-page .intro__wrapper {

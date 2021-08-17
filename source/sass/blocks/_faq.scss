@@ -1,5 +1,13 @@
 .faq {
   margin: 120px 0 0 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 70px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 60px 0 0 0;
+  }
 }
 
 .faq__wrapper {
@@ -15,6 +23,14 @@
 
 .faq__accordion {
   margin: 47px 100px 0 100px;
+
+  @media (max-width: $tablet-width) {
+    margin: 47px 10px 0 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 28px 0 0 0;
+  }
 }
 
 .faq__accordion-list {
@@ -28,12 +44,16 @@
 .faq__accordion-item {
   position: relative;
 
-  padding: 43px 70px 50px 42px;
+  padding: 43px 70px 44px 42px;
 
   border-bottom: 1px solid $brown;
 
   &:last-child {
     border: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 15px 40px 20px 25px;
   }
 }
 
@@ -46,17 +66,40 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 
 .faq__accordion-main {
   margin: 7px 0 0 0;
   padding: 0 0 0 7px;
 
+  max-width: 527px;
+
   font-family: $font-text;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 130%;
+
+  @media (max-width: $tablet-width) {
+    max-width: initial;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 15px 0 0 0;
+    padding: 0 0 0 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+  }
 }
 
 .faq__accordion-icon {
@@ -67,4 +110,12 @@
   display: none;
   width: 16px;
   height: 10px;
+
+  @media (max-width: $mobile-width) {
+    right: 23px;
+    top: 23px;
+
+    width: 20px;
+    height: 10px;
+  }
 }

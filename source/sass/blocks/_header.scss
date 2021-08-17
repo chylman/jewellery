@@ -75,6 +75,10 @@
   @media (max-width: $tablet-width) {
     padding-bottom: 30px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .header__form {
@@ -113,6 +117,11 @@
     width: 52px;
     height: 52px;
   }
+}
+
+.header__logo svg {
+  width: 100%;
+  height: 100%;
 }
 
 .header__logo-img path {
