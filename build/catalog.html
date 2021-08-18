@@ -30,8 +30,8 @@
             </svg>
           </a>
         </div>
-        <a href="" class="header__login-link">Login</a>
-        <a href="" class="header__cart-link">
+        <a href="./login.html" class="header__login-link">Login</a>
+        <a href="./cart.html" class="header__cart-link">
           <svg class="header__cart-link-img" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke="#1D1613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
@@ -86,7 +86,11 @@
       <div class="catalog-page__layout">
         <section class="filter">
           <button class="filter__button-open">Filter</button>
-          <button class="filter__button-close"></button>
+          <button class="filter__button-close" type="button">
+            <svg width="32" height="32">
+              <use xlink:href="./img/sprite_auto.svg#icon-close-circle"></use>
+            </svg>
+          </button>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="POST">
             <div class="filter-form__main-content-wrapper">
               <fieldset class="accordion">

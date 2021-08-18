@@ -7,6 +7,7 @@
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
+    row-gap: 42px;
   }
 }
 
@@ -27,6 +28,7 @@
 
   @media (max-width: $mobile-width) {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
   }
 }
 
@@ -35,6 +37,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+  }
 }
 
 .catalog__image-wrapper {
@@ -63,6 +69,11 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin: 15px 0 8px 0;
+  }
 }
 
 .catalog__item span {
@@ -88,6 +99,10 @@
 
   &:last-child {
     margin: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 15px 0 0;
   }
 }
 

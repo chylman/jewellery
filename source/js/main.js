@@ -19,6 +19,7 @@
   const popupInputFocus = document.querySelector('#login-email');
   const filter = document.querySelector('.filter');
   const filterButtonOpen = document.querySelector('.filter__button-open');
+  const filterButtonClose = document.querySelector('.filter__button-close');
   const accordionsTitle = Array.from(document.querySelectorAll('.accordion__title'));
   const accordions = Array.from(document.querySelectorAll('.accordion'));
 
@@ -100,12 +101,21 @@
     filter.classList.toggle('filter--close');
   }
 
+  const onFilterButtonClose = () => {
+    filter.classList.toggle('filter--open');
+    filter.classList.toggle('filter--close');
+  }
+
   if (filter) {
     filter.classList.add('filter--close');
   }
 
   if (filterButtonOpen) {
     filterButtonOpen.addEventListener('click', onFilterButtonOpen);
+  }
+
+  if (filterButtonClose) {
+    filterButtonClose.addEventListener('click', onFilterButtonClose);
   }
 
   accordions.forEach((element) => {

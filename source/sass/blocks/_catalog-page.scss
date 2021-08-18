@@ -12,4 +12,8 @@
 
     grid-template-columns: 1fr;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 40px auto 63px;
+  }
 }
