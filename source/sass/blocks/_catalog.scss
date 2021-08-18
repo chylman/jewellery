@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-  row-gap: 80px;
+  row-gap: 70px;
 
   justify-items: center;
 
@@ -18,7 +18,7 @@
   place-content: start center;
 
   column-gap: 30px;
-  row-gap: 44px;
+  row-gap: 35px;
 
   margin: 0;
   padding: 0;
@@ -56,7 +56,7 @@
 }
 
 .catalog__item p {
-  margin: 25px 0 15px 0;
+  margin: 25px 0 4px 0;
 
   font-family: $font-text;
   font-style: normal;

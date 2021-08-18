@@ -5,9 +5,11 @@
   grid-template-columns: min-content 1fr;
   column-gap: 50px;
 
-  margin: 78px auto 80px;
+  margin: 78px auto 74px;
 
   @media (max-width: $tablet-width) {
+    margin: 50px auto 74px;
+
     grid-template-columns: 1fr;
   }
 }

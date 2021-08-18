@@ -46,6 +46,8 @@
 }
 
 .intro--catalog-page .intro__wrapper {
+  min-height: 261px;
+
   @media (max-width: $mobile-width) {
     min-height: 261px;
   }
@@ -71,6 +73,11 @@
 }
 
 .intro--catalog-page .intro__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+
   @media (max-width: $mobile-width) {
     font-family: $font-header;
     font-style: normal;
@@ -100,6 +107,11 @@
 
 
 .intro--catalog-page .intro__text {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+
   @media (max-width: $mobile-width) {
     font-family: $font-header;
     font-style: italic;
