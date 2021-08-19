@@ -14,7 +14,7 @@
   @include wrapper;
 }
 
-.faq__title {
+.faq h2 {
   @include title;
 
   margin: 0;
@@ -57,7 +57,7 @@
   }
 }
 
-.faq__accordion-title {
+.faq__accordion h3 {
   margin: 0;
   padding: 0;
 
@@ -75,7 +75,7 @@
   }
 }
 
-.faq__accordion-main {
+.faq__accordion-item p {
   margin: 7px 0 0 0;
   padding: 0 0 0 7px;
 

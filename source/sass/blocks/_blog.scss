@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.blog__title {
+.blog h2 {
   @include title;
 
   margin: 0 0 16px 0;
