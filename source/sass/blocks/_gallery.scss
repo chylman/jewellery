@@ -76,8 +76,8 @@
 
 .gallery__item {
   @media (max-width: $mobile-width) {
-    &:nth-child(3),
-    &:nth-child(4) {
+    &:nth-child(3n),
+    &:nth-child(4n) {
       display: none;
     }
   }

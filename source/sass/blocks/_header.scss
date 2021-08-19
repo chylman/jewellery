@@ -130,13 +130,13 @@
   }
 }
 
-.header--menu-close .header__logo-img path {
+.header--menu-close .header__logo-path {
   @media (max-width: $tablet-width) {
     fill: $brown;
   }
 }
 
-.body--login-page .header__logo-img path {
+.body--login-page .header__logo-path {
   fill: $brown;
 }
 
@@ -211,6 +211,7 @@
 
 .header__cart-count {
   display: inline-block;
+  vertical-align: middle;
 
   margin: 0 0 0 5px;
 }
@@ -220,6 +221,7 @@
 
   @media (max-width: $tablet-width) {
     display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -227,7 +229,7 @@
   stroke: $white;
 }
 
-.header--menu-close .header__cart-link-img path {
+.header--menu-close .header__cart-link-path {
   @media (max-width: $tablet-width) {
     stroke: $black;
   }
@@ -397,7 +399,7 @@
   }
 }
 
-.header--menu-close .header__toggle-button path {
+.header--menu-close .header__toggle-button-path {
   @media (max-width: $tablet-width) {
     stroke: $black;
   }
