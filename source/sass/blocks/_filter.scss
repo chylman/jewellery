@@ -1,5 +1,5 @@
 .filter {
-  position: relative;
+  background-color: $white;
 }
 
 .filter__button-open {
@@ -53,8 +53,8 @@
   z-index: 99;
 
   position: absolute;
-  top: -15px;
-  right: 0;
+  top: -20px;
+  right: -8px;
 
   display: none;
   width: 32px;
@@ -74,6 +74,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (mobile-width: $mobile-width) {
+    right: -8px;
   }
 }
 

@@ -12,6 +12,8 @@
 }
 
 .search-form__img {
+  position: absolute;
+
   display: inline-block;
   vertical-align: middle;
   width: 14px;
@@ -27,6 +29,14 @@
   }
 }
 
+.search-form label {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    position: initial;
+  }
+}
+
 .search-form__img path {
   @media (max-width: $tablet-width) {
     fill: $white;
@@ -34,9 +44,10 @@
 }
 
 .search-form input {
-  width: 145px;
+  width: 170px;
 
-  margin: 0 0 0 14px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 28px;
 
   font-family: $font-text;
   font-style: normal;

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery - Product card</title>
+  <meta name="description" content="Jewellery shop">
   <link rel="preload" href="fonts/cormorant-garamond/cormorant-garamond-bold.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/poppins/poppins-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/poppins/poppins-medium.woff2" as="font" crossorigin>
@@ -14,13 +15,17 @@
 <body class="body body--no-js">
   <div class="body__layout">
     <!-- Modificators:  header--menu-close, header--menu-open -->
-    <header class="header header--menu-close">
+    <header class="header header--menu-open">
       <div class="header__wrapper">
         <form action="https://echo.htmlacademy.ru/" class="header__form search-form" method="POST">
-          <svg class="search-form__img" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.0482 10.0737L14 13.0248L13.0248 14L10.0737 11.0482C8.9757 11.9285 7.60993 12.4072 6.20262 12.4052C2.77877 12.4052 0 9.62646 0 6.20262C0 2.77877 2.77877 0 6.20262 0C9.62646 0 12.4052 2.77877 12.4052 6.20262C12.4072 7.60993 11.9285 8.9757 11.0482 10.0737ZM9.66575 9.56237C10.5404 8.66291 11.0289 7.45722 11.0269 6.20262C11.0269 3.53687 8.86768 1.37836 6.20262 1.37836C3.53687 1.37836 1.37836 3.53687 1.37836 6.20262C1.37836 8.86768 3.53687 11.0269 6.20262 11.0269C7.45722 11.0289 8.66291 10.5404 9.56237 9.66575L9.66575 9.56237Z" fill="black"/>
-          </svg>
-          <label for="header-search" class="visually-hidden">Search</label>
+          <label for="header-search">
+            <svg class="search-form__img" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.0482 10.0737L14 13.0248L13.0248 14L10.0737 11.0482C8.9757 11.9285 7.60993 12.4072 6.20262 12.4052C2.77877 12.4052 0 9.62646 0 6.20262C0 2.77877 2.77877 0 6.20262 0C9.62646 0 12.4052 2.77877 12.4052 6.20262C12.4072 7.60993 11.9285 8.9757 11.0482 10.0737ZM9.66575 9.56237C10.5404 8.66291 11.0289 7.45722 11.0269 6.20262C11.0269 3.53687 8.86768 1.37836 6.20262 1.37836C3.53687 1.37836 1.37836 3.53687 1.37836 6.20262C1.37836 8.86768 3.53687 11.0269 6.20262 11.0269C7.45722 11.0289 8.66291 10.5404 9.56237 9.66575L9.66575 9.56237Z" fill="black"/>
+            </svg>
+            <span class="visually-hidden">
+              Search
+            </span>
+          </label>
           <input type="text" name="search" id="header-search" placeholder="Type here to search">
         </form>
         <div class="header__logo">
@@ -30,14 +35,22 @@
             </svg>
           </a>
         </div>
-        <a href="./login.html" class="header__login-link">Login</a>
-        <a href="./cart.html" class="header__cart-link">
-          <svg class="header__cart-link-img" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="header__cart-path" d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke="#1D1613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Cart</span>
-          <span class="header__cart-count">0</span>
-        </a>
+        <div class="header__links-wrapper">
+          <ul class="header__links-list">
+            <li class="header__links-item header__links-item--login">
+              <a href="./login.html" class="header__login-link" data-hystmodal="#popup-login">Login</a>
+            </li>
+            <li class="header__links-item">
+              <a href="./cart.html" class="header__cart-link">
+                <svg class="header__cart-link-img" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="header__cart-link-path" d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke="#1D1613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Cart</span>
+                <span class="header__cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
@@ -67,16 +80,17 @@
               <a href="#">Contact Us</a>
             </li>
           </ul>
+          <a href="./login.html" class="header__nav-login-link" data-hystmodal="#popup-login">Login</a>
         </nav>
         <button class="header__toggle-button" type="button">
           <svg class="header__toggle-button-img" width="25" height="18" viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-            <path class="header__toggle-button-img" d="M0 1H25M0 9H25M0 17H25" stroke="white" stroke-width="2"/>
+            <path class="header__toggle-button-path" d="M0 1H25M0 9H25M0 17H25" stroke="white" stroke-width="2"/>
           </svg>
         </button>
       </div>
     </header>
     <main class="main product-card-page">
-      <h2 class="visually-hidden">Page product card</h2>
+      <h1 class="visually-hidden">Page product card</h1>
       <section class="card">
         <div class="card__wrapper">
           <div class="card__slider">
@@ -135,7 +149,7 @@
                 <td>18” / 20”</td>
               </tr>
             </table>
-            <a class="card__add-cart-link" href="">Add to cart</a>
+            <a class="card__add-cart-link" href="./add-to-cart.html" data-hystmodal="#popup-add-to-cart">Add to cart</a>
             <ul class="card__advantages-list">
               <li class="card__advantages-item"><p>14 Day Returns</p></li>
               <li class="card__advantages-item"><p>2-Year Warranty</p></li>
@@ -149,7 +163,7 @@
           <h2 class="slider__title">
             You May Also Like
           </h2>
-          <a href="" class="slider__link">Shop Now</a>
+          <a href="!#" class="slider__link">Shop Now</a>
           <div class="swiper-button-prev slider__button-prev">
             <svg width="29" height="11">
               <use xlink:href="./img/sprite_auto.svg#icon-vector3"></use>
@@ -193,6 +207,39 @@
                   </picture>
                   <p>Layered сhoker</p>
                   <span>$ 115</span>
+                </div>
+              </li>
+              <li class="slider__item swiper-slide">
+                <div class="slider__card">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source srcset="./img/galaxy-earrings-desktop.webp, ./img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
+                    <img src="./img/galaxy-earrings-desktop.jpg" alt="galaxy-earrings" srcset="./img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284">
+                  </picture>
+                  <p>Galaxy earrings</p>
+                  <span>$ 95</span>
+                </div>
+              </li>
+              <li class="slider__item swiper-slide">
+                <div class="slider__card">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source srcset="./img/galaxy-earrings-desktop.webp, ./img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
+                    <img src="./img/galaxy-earrings-desktop.jpg" alt="galaxy-earrings" srcset="./img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284">
+                  </picture>
+                  <p>Galaxy earrings</p>
+                  <span>$ 95</span>
+                </div>
+              </li>
+              <li class="slider__item swiper-slide">
+                <div class="slider__card">
+                  <picture>
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <source srcset="./img/galaxy-earrings-desktop.webp, ./img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
+                    <img src="./img/galaxy-earrings-desktop.jpg" alt="galaxy-earrings" srcset="./img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284">
+                  </picture>
+                  <p>Galaxy earrings</p>
+                  <span>$ 95</span>
                 </div>
               </li>
               <li class="slider__item swiper-slide">
@@ -324,69 +371,79 @@
     </footer>
   </div>
 
-  <div class="popup-login login popup">
-    <button class="popup-login__button-close login__button-close popup__button-close" type="button">
-      <svg width="15" height="13">
-        <use xlink:href="./img/sprite_auto.svg#icon-vector-close"></use>
-      </svg>
-    </button>
-    <div class="popup-login__img login__img">
-    </div>
-    <div class="popup-login__wrapper login__wrapper">
-      <h2 class="popup-login__title login__title">Log In</h2>
-      <form class="popup-login__form login__form" action="https://echo.htmlacademy.ru/" method="GET">
-        <label class="visually-hidden" for="login-email">Your E-mail</label>
-        <input type="email" name="login-email" id="login-email" placeholder="Your E-mail" required>
-        <label class="visually-hidden" for="login-password"></label>
-        <input type="password" name="login-password" id="login-password"  placeholder="Password" required>
-        <input class="visually-hidden" type="checkbox" name="login-forgot-password" id="login-forgot-password">
-        <label for="login-forgot-password">Forgot your password?</label>
-        <button type="submit">Log In</button>
-      </form>
-      <p class="login__text">Don’t have an account? <a href="">Sign up</a></p>
+  <div class="popup-login login popup hystmodal" id="popup-login" aria-hidden="true">
+    <div class="popup-login__wrapper hystmodal__wrap">
+      <div class="popup-login__window hystmodal__window" role="dialog" aria-modal="true">
+        <button data-hystclose class="popup-login__button-close login__button-close popup__button-close" type="button">
+          <svg width="15" height="13">
+            <use xlink:href="./img/sprite_auto.svg#icon-vector-close"></use>
+          </svg>
+        </button>
+        <div class="popup-login__img login__img">
+        </div>
+        <div class="popup-login__wrapper login__wrapper">
+          <h2 class="login__title">Log In</h2>
+          <form class="popup-login__form login__form" action="https://echo.htmlacademy.ru/" method="GET">
+            <label class="visually-hidden" for="login-email">Your E-mail</label>
+            <input type="email" name="login-email" id="login-email" placeholder="Your E-mail" required>
+            <label class="visually-hidden" for="login-password"></label>
+            <input type="password" name="login-password" id="login-password" placeholder="Password" required>
+            <input class="visually-hidden" type="checkbox" name="login-forgot-password" id="login-forgot-password">
+            <label for="login-forgot-password">Forgot your password?</label>
+            <button type="submit">Log In</button>
+          </form>
+          <p class="login__text">Don’t have an account? <a href="!#">Sign up</a></p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="popup-add-to-cart popup">
-    <h2 class="popup-add-to-cart__title"></h2>
-    <div class="popup-add-to-cart__main-content">
-      <div class="popup-add-to-cart__img-wrapper">
-        <picture>
-          <!-- 1х: 88px; 2x: 176px -->
-          <source srcset="./img/necklace-detail-1.webp, ./img/necklace-detail.webp 2x" type="image/webp">
-          <img src="./img/necklace-detail-1.jpg" alt="necklace" srcset="./img/necklace-detail.jpg 2x" width="88" height="79">
-        </picture>
-      </div>
-      <p class="popup-add-to-cart__product-name">Gold Necklace </p>
-      <span class="popup-add-to-cart__price">$ 115</span>
-      <div class="popup-add-to-cart__toggle-amount">
-        <button class="popup-add-to-cart__toggle-amount-button popup-add-to-cart__toggle-amount-button--up" type="button">
-          <svg width="14" height="14">
-            <use xlink:href="./img/sprite_auto.svg#icon-plus"></use>
+
+  <div class="popup-add-to-cart popup hystmodal" id="popup-add-to-cart">
+    <div class="popup-add-to-cart__wrapper hystmodal__wrap">
+      <div class="popup__add-to-cart__window hystmodal__window" role="dialog" aria-modal="true">
+        <h2 class="popup-add-to-cart__title">The item was added to your cart</h2>
+        <div class="popup-add-to-cart__main-content">
+          <div class="popup-add-to-cart__img-wrapper">
+            <picture>
+              <!-- 1х: 88px; 2x: 176px -->
+              <source srcset="./img/necklace-detail-1.webp, ./img/necklace-detail.webp 2x" type="image/webp">
+              <img src="./img/necklace-detail-1.jpg" alt="necklace" srcset="./img/necklace-detail.jpg 2x" width="88" height="79">
+            </picture>
+          </div>
+          <p class="popup-add-to-cart__product-name">Gold Necklace </p>
+          <span class="popup-add-to-cart__price">$ 115</span>
+          <div class="popup-add-to-cart__toggle-amount">
+            <button class="popup-add-to-cart__toggle-amount-button popup-add-to-cart__toggle-amount-button--up" type="button">
+              <svg width="14" height="14">
+                <use xlink:href="./img/sprite_auto.svg#icon-plus"></use>
+              </svg>
+            </button>
+            <span class="popup-add-to-cart__amount">1</span>
+            <button class="popup-add-to-cart__toggle-amount-button popup-add-to-cart__toggle-amount-button--down" type="button">
+              <svg width="14" height="14">
+                <use xlink:href="./img/sprite_auto.svg#icon-minus"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="popup-add-to-cart__cart-infomation">
+          <p class="popup-add-to-cart__cart-infomation-amount">You have <span>1</span> item in the cart</p>
+          <p class="popup-add-to-cart__cart-infomation-sum-price">Cart subtotal: <span class="popup-add-to-cart__cart-infomation-nubmer">$ 115</span></p>
+        </div>
+        <div class="popup-add-to-cart__link-wrapper">
+          <a href="./catalog.html" class="popup-add-to-cart__link popup-add-to-cart__link--continue">Continue shopping</a>
+          <a href="./cart.html" class="popup-add-to-cart__link popup-add-to-cart__link--checkout">Checkout</a>
+        </div>
+        <button data-hystclose class="popup-add-to-cart__button-close popup__button-close" type="button">
+          <svg width="15" height="13">
+            <use xlink:href="./img/sprite_auto.svg#icon-vector-close"></use>
           </svg>
         </button>
-        <span class="popup-add-to-cart__amount">1</span>
-        <button class="popup-add-to-cart__toggle-amount-button popup-add-to-cart__toggle-amount-button--down" type="button">
-          <svg width="14" height="14">
-            <use xlink:href="./img/sprite_auto.svg#icon-minus"></use>
-          </svg>
-        </button>
       </div>
     </div>
-    <div class="popup-add-to-cart__cart-infomation">
-      <p class="popup-add-to-cart__cart-infomation-amount">You have <span>1</span> item in the cart</p>
-      <p class="popup-add-to-cart__cart-infomation-sum-price">Cart subtotal: <span class="popup-add-to-cart__cart-infomation-nubmer">$ 115</span></p>
-    </div>
-    <div class="popup-add-to-cart__link-wrapper">
-      <a href="./catalog.html" class="popup-add-to-cart__link popup-add-to-cart__link--continue">Continue shopping</a>
-      <a href="./cart.html" class="popup-add-to-cart__link popup-add-to-cart__link--checkout">Checkout</a>
-    </div>
-    <button class="popup-add-to-cart__button-close popup__button-close" type="button">
-      <svg width="15" height="13">
-        <use xlink:href="./img/sprite_auto.svg#icon-vector-close"></use>
-      </svg>
-    </button>
   </div>
+
   <div class="popup-overlay"></div>
 
   <script src="./js/vendors.js"></script>

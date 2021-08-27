@@ -10,12 +10,27 @@
   left: 0;
 
   display: none;
-  width: 430px;
-  max-height: 586px;
-
   box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
 
   @media (max-width: $mobile-width) {
     width: 270px;
   }
+}
+
+.body--login-page .popup-login {
+  position: initial;
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+}
+
+.popup-login__window {
+  width: 430px;
+  max-height: 586px;
+}
+
+.body--login-page .popup-login__window {
+  width: 100%;
 }

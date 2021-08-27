@@ -58,6 +58,10 @@
   @media (max-width: $tablet-width) {
     margin: 0 0 18px 0;
   }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 20px 0;
+  }
 }
 
 .slider__link {
@@ -96,6 +100,14 @@
 
   &::after {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (max-width: $tablet-width) {
@@ -186,6 +198,18 @@
   }
 }
 
+.slider__card-img-wrapper {
+  @media (max-width: $tablet-width) {
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    display: block;
+    height: 136px;
+  }
+}
+
 .slider__card img {
   width: 100%;
 
@@ -198,6 +222,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    max-height: 136px;
+    width: 100%;
+    display: block;
+    max-height: 100%;
   }
 }

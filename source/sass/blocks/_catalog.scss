@@ -51,7 +51,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    height: 136px;
+    height: initial;
   }
 }
 
@@ -59,6 +59,12 @@
   height: 100%;
 
   object-fit: cover;
+
+  @media (max-width: $mobile-width) {
+    object-fit: contain;
+    height: auto;
+    max-height: 100%;
+  }
 }
 
 .catalog__item p {
@@ -95,10 +101,18 @@
 }
 
 .catalog__pagination-item {
-  margin: 0 12px 0 0;
+  margin: 0 5px 0 0;
 
   &:last-child {
     margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (max-width: $mobile-width) {

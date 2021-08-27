@@ -10,6 +10,7 @@
 }
 
 .intro--main-page {
+  background-color: rgb(102, 53, 5);
   background-image: url('../img/group28intro-desktop.jpg');
 
   @media (min-resolution: 2dppx) {
@@ -18,6 +19,7 @@
 }
 
 .intro--catalog-page {
+  background-color: rgb(102, 53, 5);
   background-image: url('../img/group29-1.jpg');
 
   @media (min-resolution: 2dppx) {
@@ -74,10 +76,12 @@
 }
 
 .intro--catalog-page h2 {
+  font-family: $font-header;
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 130%;
+  letter-spacing: 0;
 
   @media (max-width: $mobile-width) {
     font-family: $font-header;

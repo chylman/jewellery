@@ -208,7 +208,7 @@
 .blog__article--left .blog__article-text-wrapper {
   grid-row: 1 / 2;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     grid-column: initial;
     grid-row: initial;
   }

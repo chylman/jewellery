@@ -25,7 +25,8 @@
   margin: 47px 100px 0 100px;
 
   @media (max-width: $tablet-width) {
-    margin: 47px 10px 0 10px;
+    margin: 47px 0 0 0;
+    padding: 0 0 0 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -39,12 +40,19 @@
 
   border: 1px solid $brown;
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 0 10px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 0 0;
+  }
 }
 
 .faq__accordion-item {
   position: relative;
 
-  padding: 43px 70px 44px 42px;
 
   border-bottom: 1px solid $brown;
 
@@ -59,7 +67,7 @@
 
 .faq__accordion h3 {
   margin: 0;
-  padding: 0;
+  padding: 43px 70px 44px 42px;
 
   font-family: $font-text;
   font-style: normal;
@@ -68,6 +76,8 @@
   line-height: 130%;
 
   @media (max-width: $mobile-width) {
+    padding: 0;
+
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -76,8 +86,8 @@
 }
 
 .faq__accordion-item p {
-  margin: 7px 0 0 0;
-  padding: 0 0 0 7px;
+  margin: -34px 0 0 0;
+  padding: 0 70px 44px 42px;
 
   max-width: 527px;
 
@@ -88,6 +98,9 @@
   line-height: 130%;
 
   @media (max-width: $tablet-width) {
+    margin: -34px 0 0 0;
+    padding: 0 70px 44px 42px;
+
     max-width: initial;
   }
 

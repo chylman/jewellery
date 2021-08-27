@@ -9,13 +9,13 @@
   const menuToggleButton = document.querySelector('.header__toggle-button');
   const header = document.querySelector('.header');
 
-  const popupOpenButtonLogin = document.querySelector('.header__login-link');
-  const popupOpenButtonAddToCart = document.querySelector('.card__add-cart-link');
-  const popups = Array.from(document.querySelectorAll('.popup'));
-  const popupLogin = document.querySelector('.popup-login');
-  const popupAdToCart = document.querySelector('.popup-add-to-cart');
-  const popupButtonsClose = Array.from(document.querySelectorAll('.popup__button-close'));
-  const popupOverlay = document.querySelector('.popup-overlay');
+  // const popupOpenButtonLogin = document.querySelector('.header__login-link');
+  // const popupOpenButtonAddToCart = document.querySelector('.card__add-cart-link');
+  // const popups = Array.from(document.querySelectorAll('.popup'));
+  // const popupLogin = document.querySelector('.popup-login');
+  // const popupAdToCart = document.querySelector('.popup-add-to-cart');
+  // const popupButtonsClose = Array.from(document.querySelectorAll('.popup__button-close'));
+  // const popupOverlay = document.querySelector('.popup-overlay');
   const popupInputFocus = document.querySelector('#login-email');
   const filter = document.querySelector('.filter');
   const filterButtonOpen = document.querySelector('.filter__button-open');
@@ -24,6 +24,8 @@
   const accordions = Array.from(document.querySelectorAll('.accordion'));
 
   document.body.classList.remove('body--no-js');
+  header.classList.toggle('header--menu-close');
+  header.classList.toggle('header--menu-open');
 
   const onMenuToggleButtonClick = () => {
     header.classList.toggle('header--menu-close');
@@ -35,75 +37,91 @@
     menuToggleButton.addEventListener('click', onMenuToggleButtonClick);
   }
 
-  const onPopupOpenButtonClick = (evt) => {
-    evt.preventDefault();
+  const myModal = new HystModal({
+    linkAttributeName: 'data-hystmodal',
+    catchFocus: true,
+    waitTransitions: true,
+    closeOnEsc: true,
+    closeOnOverlay: true,
+    beforeOpen: function(modal){
+      console.log(modal);
+  },
+});
 
-    switch (evt.target) {
-      case popupOpenButtonLogin:
-        popupLogin.classList.add('popup--show');
-        break;
-      case popupOpenButtonAddToCart:
-        popupAdToCart.classList.add('popup--show');
-        break;
-      default:
-        break;
-    }
+  // const onPopupOpenButtonClick = (evt) => {
+  //   evt.preventDefault();
 
-    document.addEventListener('keydown', onPopupCloseKeydown);
-    document.body.classList.add('overflow-hidden');
-    popupOverlay.addEventListener('click', onPopupOverlayClick);
-    popupOverlay.classList.add('popup-overlay--show');
-    if (popupInputFocus) {
-      popupInputFocus.focus();
-    }
-  }
+  //   switch (evt.target) {
+  //     case popupOpenButtonLogin:
+  //       popupLogin.classList.add('popup--show');
+  //       break;
+  //     case popupOpenButtonAddToCart:
+  //       popupAdToCart.classList.add('popup--show');
+  //       break;
+  //     default:
+  //       break;
+  //   }
 
-  const onPopupButtonCloseClick = (evt) => {
-    popups.forEach(element => {
-      element.classList.remove('popup--show');
-    });
-    document.body.classList.remove('overflow-hidden');
-    popupOverlay.classList.remove('popup-overlay--show');
-  }
+  //   document.addEventListener('keydown', onPopupCloseKeydown);
+  //   document.body.classList.add('overflow-hidden');
+  //   popupOverlay.addEventListener('click', onPopupOverlayClick);
+  //   popupOverlay.classList.add('popup-overlay--show');
+  //   if (popupInputFocus) {
+  //     popupInputFocus.focus();
+  //   }
+  // }
 
-  const onPopupCloseKeydown = (evt) => {
-    if (evt.key === Keys.ESCAPE ||evt.key === Keys.ESC) {
-      popups.forEach(element => {
-        element.classList.remove('popup--show');
-      });
-      document.body.classList.remove('overflow-hidden');
-      popupOverlay.classList.remove('popup-overlay--show');
-    }
-  }
+  // const onPopupButtonCloseClick = (evt) => {
+  //   popups.forEach(element => {
+  //     element.classList.remove('popup--show');
+  //   });
+  //   document.body.classList.remove('overflow-hidden');
+  //   popupOverlay.classList.remove('popup-overlay--show');
+  // }
 
-  const onPopupOverlayClick = (evt) => {
-    popups.forEach(element => {
-      element.classList.remove('popup--show');
-    });
-    document.body.classList.remove('overflow-hidden');
-    popupOverlay.classList.remove('popup-overlay--show');
-  }
+  // const onPopupCloseKeydown = (evt) => {
+  //   if (evt.key === Keys.ESCAPE ||evt.key === Keys.ESC) {
+  //     popups.forEach(element => {
+  //       element.classList.remove('popup--show');
+  //     });
+  //     document.body.classList.remove('overflow-hidden');
+  //     popupOverlay.classList.remove('popup-overlay--show');
+  //   }
+  // }
 
-  if (popupOpenButtonLogin) {
-    popupOpenButtonLogin.addEventListener('click', onPopupOpenButtonClick);
-  }
+  // const onPopupOverlayClick = (evt) => {
+  //   popups.forEach(element => {
+  //     element.classList.remove('popup--show');
+  //   });
+  //   document.body.classList.remove('overflow-hidden');
+  //   popupOverlay.classList.remove('popup-overlay--show');
+  // }
 
-  if (popupOpenButtonAddToCart) {
-    popupOpenButtonAddToCart.addEventListener('click', onPopupOpenButtonClick);
-  }
+  // if (popupOpenButtonLogin) {
+  //   popupOpenButtonLogin.addEventListener('click', onPopupOpenButtonClick);
+  // }
 
-  popupButtonsClose.forEach(element => {
-    element.addEventListener('click', onPopupButtonCloseClick)
-  });
+  // if (popupOpenButtonAddToCart) {
+  //   popupOpenButtonAddToCart.addEventListener('click', onPopupOpenButtonClick);
+  // }
+
+  // popupButtonsClose.forEach(element => {
+  //   element.addEventListener('click', onPopupButtonCloseClick)
+  // });
 
   const onFilterButtonOpen = () => {
     filter.classList.toggle('filter--open');
     filter.classList.toggle('filter--close');
+    document.body.classList.add('overflow-hidden');
+    accordionsTitle.forEach(element => {
+      element.tabIndex = 1;
+    });
   }
 
   const onFilterButtonClose = () => {
     filter.classList.toggle('filter--open');
     filter.classList.toggle('filter--close');
+    document.body.classList.remove('overflow-hidden');
   }
 
   if (filter) {

@@ -54,6 +54,13 @@
 
   @media (max-width: $tablet-width) {
     margin: -14px 0 12px 0;
+
+    font-family: $font-header;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
   }
 
   @media (max-width: $mobile-width) {
@@ -104,6 +111,7 @@
 
   border: none;
   background-color: $black-standart;
+  cursor: pointer;
 
   &::placeholder {
     font-family: $font-text;
@@ -123,6 +131,14 @@
     width: 100%;
 
     margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
