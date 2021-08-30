@@ -87,6 +87,10 @@
   cursor: pointer;
 }
 
+.filter-form legend:focus {
+  border: 1px dashed $gray;
+}
+
 .filter-form__accordion-icon {
   display: none;
 
@@ -142,6 +146,10 @@
 
 .filter-form input[type='checkbox']:checked + label::before {
   background-color: $brown;
+}
+
+.filter-form input[type='checkbox']:focus + label {
+  border: 1px dashed $gray;
 }
 
 .filter-form__input-list {

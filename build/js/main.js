@@ -147,6 +147,7 @@
 
   accordionsTitle.forEach(element => {
     element.addEventListener('click', onAccordionsTitleClick);
+    element.tabIndex = 0;
   });
 
   const swiper = new Swiper('.swiper-container', {
