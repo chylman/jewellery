@@ -20,7 +20,14 @@
   @media (max-width: $mobile-width) {
     width: 290px;
     height: 519px;
+
+    padding: 40px 15px 45px;
+
   }
+}
+
+.popup-add-to-cart__wrapper {
+  justify-content: flex-start;
 }
 
 .popup-add-to-cart h2 {
@@ -34,6 +41,16 @@
   text-align: center;
 
   color: $black;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 26px 0;
+    padding: 0 25px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+  }
 }
 
 .popup-add-to-cart__main-content {
@@ -45,7 +62,7 @@
   margin: 0 0 53px 0;
 
   @media (max-width: $mobile-width) {
-    margin: 0 0 30px 0;
+    margin: 0 0 55px 0;
   }
 }
 
@@ -56,6 +73,11 @@
   height: 79px;
 
   margin: 5px 0 0 0;
+
+  @media (max-width: $mobile-width) {
+    width: 70px;
+    height: 63px;
+  }
 }
 
 .popup-add-to-cart__img-wrapper img {
@@ -76,6 +98,13 @@
   line-height: 130%;
 
   color: $black;
+
+  @media (max-width: $mobile-width) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
 
 .popup-add-to-cart__price {
@@ -86,6 +115,13 @@
   line-height: 130%;
 
   color: $black;
+
+  @media (max-width: $mobile-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
 
 .popup-add-to-cart__toggle-amount {
@@ -114,6 +150,13 @@
   font-size: 18px;
   line-height: 130%;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+  }
 }
 
 .popup-add-to-cart__cart-infomation {
@@ -128,6 +171,10 @@
 
   @media (max-width: $mobile-width) {
     flex-wrap: wrap;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
   }
 }
 
@@ -148,6 +195,13 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 130%;
+
+  @media (max-width: $mobile-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+  }
 }
 
 .popup-add-to-cart__cart-infomation-sum-price {
@@ -166,7 +220,7 @@
   @media (max-width: $mobile-width) {
     flex-wrap: wrap;
 
-    margin: 20px 0 0 0;
+    margin: 30px 0 0 0;
   }
 }
 
@@ -205,6 +259,11 @@
     margin: 0 0 20px 0;
 
     width: 100%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
 
     &:last-child {
       margin: 0;
@@ -246,6 +305,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -25px;
+    right: -5px;
   }
 }
 

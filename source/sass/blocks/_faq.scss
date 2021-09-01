@@ -30,7 +30,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin: 28px 0 0 0;
+    margin: 26px 0 0 0;
   }
 }
 
@@ -76,7 +76,7 @@
   line-height: 130%;
 
   @media (max-width: $mobile-width) {
-    padding: 0;
+    padding: 0 0 3px 0;
 
     font-style: normal;
     font-weight: 500;
@@ -99,7 +99,7 @@
 
   @media (max-width: $tablet-width) {
     margin: -34px 0 0 0;
-    padding: 0 70px 44px 42px;
+    padding: 17px 70px 44px 42px;
 
     max-width: initial;
   }

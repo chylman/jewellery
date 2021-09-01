@@ -179,6 +179,11 @@
   justify-content: space-between;
 
   margin: -6px 0 -14px 0;
+  padding: 0 29px;
+
+  &:last-child {
+    margin: -6px 0 -14px 0;
+  }
 }
 
 .filter-form button[type="reset"],
@@ -199,6 +204,8 @@
 
   background: none;
   border: 1px solid $brown;
+
+  cursor: pointer;
 
   &:hover {
     opacity: 0.7;
